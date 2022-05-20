@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     use HasFactory;
+    // Asignamos los campos que queremos permitir que se guarden
+    // protected $fillable = ['name', 'descripcion', 'categoria'];
+    //guarded = Asignamos los campos protegidos para que no se guarden
+    protected $guarded = [''];
 }
