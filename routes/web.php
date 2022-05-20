@@ -17,6 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return "Vistar curso";
+Route::get('cursos', function () {
+    return "Vista cursos";
+});
+
+Route::get('cursos/create', function () {
+    return 'Estas en seccion de creacion de cursos';
+});
+
+Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
+    if ($categoria) {
+        return "Bienviendo al curso $curso de la categoria $categoria";
+    }
+    return  "Bienviendo al curso $curso";
 });
