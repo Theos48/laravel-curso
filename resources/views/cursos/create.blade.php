@@ -9,7 +9,7 @@
         <label>
             Nombre:
             <br>
-            <input type="text" name="name" id="" value="{{old('name')}}">
+            <input type="text" name="name" id="" value="{{ old('name') }}">
         </label>
         @error('name')
             <br>
@@ -20,7 +20,7 @@
         <label>
             Descripcion:
             <br>
-            <textarea name="descripcion" id="" cols="30" rows="10">{{old('descripcion')}}</textarea>
+            <textarea name="descripcion" id="" cols="30" rows="10">{{ old('descripcion') }}</textarea>
         </label>
         @error('descripcion')
             <br>
@@ -31,7 +31,7 @@
         <label>
             Categoria:
             <br>
-            <input type="text" name="categoria" id="" value="{{old('categoria')}}">
+            <input type="text" name="categoria" id="" value="{{ old('categoria') }}">
         </label>
         @error('categoria')
             <br>

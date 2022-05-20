@@ -53,7 +53,7 @@ class CursoController extends Controller
             'descripcion' => 'required|min:10',
             'categoria' => 'required'
         ]);
-        
+
         $curso->name = $request->name;
         $curso->descripcion = $request->descripcion;
         $curso->categoria = $request->categoria;

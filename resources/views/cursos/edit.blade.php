@@ -32,7 +32,7 @@
         <label>
             Categoria:
             <br>
-            <input type="text" name="categoria" id="" value="{{ old('categoria', $curso->categoria) }}">
+            <input type="text" name="categoria" id="" value="{{ oldgit('categoria', $curso->categoria) }}">
         </label>
         @error('categoria')
             <br>
