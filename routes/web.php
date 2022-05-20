@@ -16,11 +16,17 @@ use App\Http\Controllers\CursoController;
 
 Route::get('/', HomeController::class);
 
-Route::get('cursos', [CursoController::class, 'index']);
+Route::controller(CursoController::class)->group(function () {
+    Route::get('cursos', 'index');
+    Route::get('cursos/create', 'create');
+    Route::get('cursos/{curso}', 'show');
+});
 
-Route::get('cursos/create', [CursoController::class, 'create']);
+// Route::get('cursos', [CursoController::class, 'index']);
 
-Route::get('cursos/{curso}', [CursoController::class, 'show']);
+// Route::get('cursos/create', [CursoController::class, 'create']);
+
+// Route::get('cursos/{curso}', [CursoController::class, 'show']);
 
 // Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
 //     if ($categoria) {
