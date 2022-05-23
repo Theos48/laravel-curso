@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\ContactanosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CursoController;
-use App\Mail\ContactanosMail;
-use Illuminate\Support\Facades\Mail;
+
 
 use Whoops\Run;
 
@@ -23,13 +23,15 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::resource('cursos', CursoController::class);
 Route::view('nosotros', 'nosotros')->name('nosotros');
-Route::get('contactanos', function(){
-    $correo = new ContactanosMail;
+Route::resource('contactanos', ContactanosController::class);
+// Route::view('contactanos', ContactanosController::class );
+// Route::get('contactanos', function(){
+//     $correo = new ContactanosMail;
 
-    Mail::to('david_ramirezz@hotmail.com')->send($correo);
+//     Mail::to('david_ramirezz@hotmail.com')->send($correo);
 
-    return 'Mensaje enviado';
-});
+//     return 'Mensaje enviado';
+// });
 
 // Route::controller(CursoController::class)->group(function () {
 //     Route::get('cursos', 'index')->name('cursos.index');

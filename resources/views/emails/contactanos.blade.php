@@ -397,6 +397,9 @@
                                             </table>
                                             <p>This is a really simple email template. Its sole purpose is to get the
                                                 recipient to click the button with no distractions.</p>
+                                            <p> <strong>Nombre: </strong>{{ $contacto['name'] }}</p>
+                                            <p> <strong>Correo: </strong>{{ $contacto['correo'] }}</p>
+                                            <p> <strong>mensaje: </strong>{{ $contacto['mensaje'] }}</p>
                                             <p>Good luck! Hope it works.</p>
                                         </td>
                                     </tr>
